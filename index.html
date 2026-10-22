@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>إتقان</title>
+<style>
+:root{--bg:#ece9dc;--cd:#faf7ee;--tx:#1d2a23;--mu:#7a8279;--pr:#1b5640;--p2:#dcece4;--bd:#e2ddcc;--er:#c0392b;--wa:#d98e04;--in:#2b6cb0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#111814;--cd:#1a2420;--tx:#e8efe9;--mu:#97a79c;--pr:#4fc08f;--p2:#203a2e;--bd:#2c3a32;--er:#ef7a6c;--wa:#f0b43c;--in:#6ea8e8}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#111814;--cd:#1a2420;--tx:#e8efe9;--mu:#97a79c;--pr:#4fc08f;--p2:#203a2e;--bd:#2c3a32;--er:#ef7a6c;--wa:#f0b43c;--in:#6ea8e8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Segoe UI",Tahoma,"Noto Naskh Arabic",Arial,sans-serif;padding-bottom:calc(78px + env(safe-area-inset-bottom,0px));line-height:1.6}
+header{padding:14px 16px 6px;display:flex;align-items:center;gap:10px;max-width:640px;margin:auto}
+.lg{width:44px;height:44px;border-radius:14px;background:var(--pr);color:var(--cd);display:grid;place-items:center;font-size:22px}
+header h1{margin:0;font-size:22px;color:var(--pr);line-height:1.2}header small{color:var(--mu);font-size:12px}
+.chip{margin-right:auto;background:var(--cd);border:1px solid var(--bd);border-radius:14px;padding:6px 12px;font-size:13px}
+#um{display:none;position:absolute;left:14px;top:calc(66px + env(safe-area-inset-top,0px));width:min(300px,calc(100% - 28px));z-index:8;margin:0;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+main{padding:6px 14px;max-width:640px;margin:auto}
+.c{background:var(--cd);border:1px solid var(--bd);border-radius:22px;padding:16px;margin:12px 0}
+h2{font-size:17px;margin:6px 0 8px}h3{margin:0;font-size:26px}
+label{display:block;font-size:13px;color:var(--mu);margin:8px 0 4px}
+input,select,textarea,button{font:inherit;color:inherit}
+input,select,textarea{width:100%;padding:11px;border-radius:14px;border:1px solid var(--bd);background:var(--bg)}
+button{border:0;border-radius:16px;padding:12px 16px;background:var(--pr);color:var(--cd);cursor:pointer;font-weight:600}
+button.g{background:transparent;color:var(--tx);border:1px solid var(--bd)}
+.row{display:flex;gap:8px;align-items:center}.row>*{flex:1}.row .f0{flex:0 0 auto}
+.bar{height:12px;background:var(--bg);border-radius:8px;overflow:hidden;margin:8px 0}.bar i{display:block;height:100%;background:var(--pr);border-radius:8px}
+.big{font-size:30px;font-weight:700;color:var(--pr)}
+.pill{font-size:12px;border:1px solid var(--bd);border-radius:12px;padding:3px 12px;color:var(--mu);flex:0 0 auto}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.g2 .c{margin:0}
+.kv{display:flex;justify-content:space-between;padding:3px 0}
+.sec{display:flex;gap:12px;align-items:center;text-align:right;width:100%;background:var(--cd);color:var(--tx);border:1px solid var(--bd);border-radius:22px;padding:14px;margin:8px 0}
+.sec .ic{width:52px;height:52px;border-radius:16px;background:var(--p2);display:grid;place-items:center;font-size:22px;flex:0 0 auto}
+.sec small{display:block;color:var(--mu);font-weight:400}
+.seg{display:flex;gap:6px;background:var(--bg);padding:4px;border-radius:16px}.seg button{flex:1;background:transparent;color:var(--mu);padding:9px}.seg button.on{background:var(--pr);color:var(--cd)}
+.ec{display:flex;gap:8px}.ec>div{flex:1;text-align:center;border:1px solid var(--bd);border-radius:16px;padding:8px}
+.ec b{display:block;font-size:26px}.ec .bt{display:flex;gap:6px}.ec .bt button{flex:1;padding:6px}
+.m{padding:10px;border-radius:14px;background:var(--bg);margin:6px 0;font-size:20px;line-height:2;font-family:"Amiri","Traditional Arabic","Noto Naskh Arabic",serif}
+.m mark{background:transparent;color:var(--mu)}.m span{color:var(--pr);font-weight:700}.m small{display:block;font-size:12px;color:var(--mu);font-family:inherit}
+.note{font-size:13px;color:var(--mu)}.tn{background:var(--p2);border-radius:12px;padding:6px 10px;margin-top:6px;font-size:13px}
+.li{border-bottom:1px solid var(--bd);padding:10px 0}.li:last-child{border:0}
+nav{position:fixed;bottom:0;left:0;right:0;display:flex;background:var(--cd);border-top:1px solid var(--bd);padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));z-index:5}
+nav button{flex:1;background:transparent;color:var(--mu);padding:8px 2px;font-size:12px;font-weight:500}nav button.on{color:var(--pr);font-weight:700}nav b{display:block;font-size:20px}
+#toast{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);background:var(--pr);color:var(--cd);padding:8px 16px;border-radius:20px;display:none;z-index:9}
+</style>
+</head>
+<body>
+<header><div class="lg">إ</div><div><h1>إتقان</h1><small>حلقة ربعي بن عمرو الأنصاري</small></div><div class="chip" id="me" onclick="tm()"></div></header>
+<div id="um" class="c"></div>
+<main id="v"></main><div id="toast"></div><nav id="nv"></nav>
+<script>
+const SN="الفاتحة:7,البقرة:286,آل عمران:200,النساء:176,المائدة:120,الأنعام:165,الأعراف:206,الأنفال:75,التوبة:129,يونس:109,هود:123,يوسف:111,الرعد:43,إبراهيم:52,الحجر:99,النحل:128,الإسراء:111,الكهف:110,مريم:98,طه:135,الأنبياء:112,الحج:78,المؤمنون:118,النور:64,الفرقان:77,الشعراء:227,النمل:93,القصص:88,العنكبوت:69,الروم:60,لقمان:34,السجدة:30,الأحزاب:73,سبأ:54,فاطر:45,يس:83,الصافات:182,ص:88,الزمر:75,غافر:85,فصلت:54,الشورى:53,الزخرف:89,الدخان:59,الجاثية:37,الأحقاف:35,محمد:38,الفتح:29,الحجرات:18,ق:45,الذاريات:60,الطور:49,النجم:62,القمر:55,الرحمن:78,الواقعة:96,الحديد:29,المجادلة:22,الحشر:24,الممتحنة:13,الصف:14,الجمعة:11,المنافقون:11,التغابن:18,الطلاق:12,التحريم:12,الملك:30,القلم:52,الحاقة:52,المعارج:44,نوح:28,الجن:28,المزمل:20,المدثر:56,القيامة:40,الإنسان:31,المرسلات:50,النبأ:40,النازعات:46,عبس:42,التكوير:29,الانفطار:19,المطففين:36,الانشقاق:25,البروج:22,الطارق:17,الأعلى:19,الغاشية:26,الفجر:30,البلد:20,الشمس:15,الليل:21,الضحى:11,الشرح:8,التين:8,العلق:19,القدر:5,البينة:8,الزلزلة:8,العاديات:11,القارعة:11,التكاثر:8,العصر:3,الهمزة:9,الفيل:5,قريش:4,الماعون:7,الكوثر:3,الكافرون:6,النصر:3,المسد:5,الإخلاص:4,الفلق:5,الناس:6".split(",").map(x=>{const p=x.split(":");return{n:p[0],c:+p[1]}});
+const SM={1:["بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ","الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ","الرَّحْمَٰنِ الرَّحِيمِ","مَالِكِ يَوْمِ الدِّينِ","إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ","اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ","صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ"],
+103:["وَالْعَصْرِ","إِنَّ الْإِنسَانَ لَفِي خُسْرٍ","إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ"],
+108:["إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ","فَصَلِّ لِرَبِّكَ وَانْحَرْ","إِنَّ شَانِئَكَ هُوَ الْأَبْتَرُ"],
+112:["قُلْ هُوَ اللَّهُ أَحَدٌ","اللَّهُ الصَّمَدُ","لَمْ يَلِدْ وَلَمْ يُولَدْ","وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ"],
+113:["قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ","مِن شَرِّ مَا خَلَقَ","وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ","وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ","وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ"],
+114:["قُلْ أَعُوذُ بِرَبِّ النَّاسِ","مَلِكِ النَّاسِ","إِلَٰهِ النَّاسِ","مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ","الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ","مِنَ الْجِنَّةِ وَالنَّاسِ"]};
+const Q={};for(const s in SM)SM[s].forEach((t,i)=>Q[s+":"+(i+1)]=t);
+try{Object.assign(Q,JSON.parse(localStorage.getItem("itqQ")||"{}"))}catch(e){}
+const $=id=>document.getElementById(id);
+const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const toast=m=>{const t=$("toast");t.textContent=m;t.style.display="block";setTimeout(()=>t.style.display="none",2400)};
+const SEC={h:"حفظ جديد",r:"ربط",m:"مراجعة"},DAYS=["الأحد","الاثنين","الثلاثاء","الأربعاء","الخميس"];
+const SD={h:"سورة مقررة واحدة، مع تصحيح الكلمة حسب المصحف",r:"مدى من سورة إلى سورة أثناء الربط",m:"نفس آلية الربط لمواضع المراجعة"};
+const TABS=[["home",'<path d="M3.5 11.5 12 4l8.5 7.5"/><path d="M5.5 10v9.5h13V10"/><path d="M10 19.5v-5h4v5"/>',"الرئيسية"],["s",'<path d="M12 6.5v13"/><path d="M12 6.5c-2.2-1.6-5-2-8-1.5v13c3-.5 5.8-.1 8 1.5 2.2-1.6 5-2 8-1.5V5c-3-.5-5.8-.1-8 1.5z"/>',"تسميع"],["sch",'<rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M8 3v4M16 3v4M3.5 10h17"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 17.5h.01M12 17.5h.01"/>',"الجدول"],["log",'<path d="M9 4h9a2 2 0 0 1 2 2v11a3 3 0 0 1-3 3H7a3 3 0 0 0 3-3V6a2 2 0 0 0-2-2 2 2 0 0 0-2 2v2h4"/><path d="M13 9h4M13 13h4"/>',"السجل"],["st",'<path d="M4 20h16"/><path d="M7 20V10M12 20V5M17 20v-7"/>',"إحصاء"]];
+let uid=null,USERS=[],isT=true,LOGS=[],SCH={},tab="home",per="w";
+let cur={k:"h",a:1,z:1,items:[],note:""};const N=["خطأ","لحن","تنبيه"],CL=["er","wa","in"];const ec=a=>[0,1,2].map(c=>a.filter(x=>x.c==c).length);const itx=l=>(l.items||[]).filter(x=>x.w||x.v).map(x=>N[x.c]+": "+(x.w||"")+(x.v?" ["+vr(x.v)+"]":"")).join("، ");
+const sc=e=>Math.max(0,100-(e[0]*5+e[1]*3+e[2]));
+const t0=p=>{const d=new Date();d.setHours(0,0,0,0);if(p=="m")d.setDate(1);else d.setDate(d.getDate()-d.getDay());return +d};
+const nm=u=>(USERS.find(x=>x.id==u)||{}).name||"محذوف";
+const mine=()=>LOGS.filter(l=>l.u==uid);
+const avg=a=>a.length?Math.round(a.reduce((s,l)=>s+l.sc,0)/a.length):null;
+const rng=l=>SN[l.a-1].n+(l.a!=l.z?" ← "+SN[l.z-1].n:"");
+const fd=t=>new Date(t).toLocaleDateString("ar",{weekday:"short",day:"numeric",month:"short"});
+const refresh=()=>{if(tab!="s")render()};
+const loc=()=>{try{localStorage.setItem("itq3",JSON.stringify({l:LOGS,s:SCH,u:USERS,c:uid}))}catch(e){}};
+
+function init(){try{const x=JSON.parse(localStorage.getItem("itq3")||localStorage.getItem("itq2")||"{}");LOGS=x.l||[];SCH=x.s||{};USERS=x.u||[];uid=x.c||null}catch(e){}
+ if(!USERS.length)USERS=[{id:"u"+Date.now(),name:"طالب 1"}];
+ if(!USERS.find(u=>u.id==uid))uid=USERS[0].id;
+ LOGS.forEach(l=>{if(!USERS.find(u=>u.id==l.u))l.u=uid});
+ loc();nav();render()}
+function pickU(id){uid=id;loc();render()}
+function addU(){const n=$("un").value.trim();if(!n)return toast("اكتب الاسم");const u={id:"u"+Date.now(),name:n};USERS.push(u);uid=u.id;loc();render()}
+function delU(id){if(USERS.length<2)return toast("يلزم مستخدم واحد على الأقل");if(!confirm("حذف المستخدم وسجلاته؟"))return;USERS=USERS.filter(u=>u.id!=id);LOGS=LOGS.filter(l=>l.u!=id);if(uid==id)uid=USERS[0].id;loc();render()}
+function nav(){$("nv").innerHTML=TABS.map(t=>`<button class="${tab==t[0]?"on":""}" onclick="go('${t[0]}')"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:block;margin:0 auto 2px">${t[1]}</svg>${t[2]}</button>`).join("")}
+function go(t,k){tab=t;if(k)cur.k=k;nav();render();scrollTo(0,0)}
+function render(){$("me").textContent=nm(uid)+" ▾";$("um").style.display="none";$("v").innerHTML={home,s:sess,sch,log,st}[tab]()}
+const opts=v=>SN.map((s,i)=>`<option value="${i+1}"${v==i+1?" selected":""}>${i+1}. ${s.n}</option>`).join("");
+
+function today(){const d=new Date().getDay();if(d>4)return{t:"راحة نهاية الأسبوع"};const x=SCH[d];if(!x)return{t:"لا يوجد مقرر محدد",d};
+ const l={a:x.a,z:x.z};return{t:SEC[x.k]+": "+rng(l),k:x.k,x,d}}
+function home(){
+ const w=mine().filter(l=>l.t>=t0("w")),days=new Set(w.filter(l=>new Date(l.t).getDay()<5).map(l=>new Date(l.t).toDateString())).size;
+ const a=avg(w),T=today(),dn=mine().some(l=>new Date(l.t).toDateString()==new Date().toDateString());
+ const E=[0,1,2].map(i=>w.reduce((s,l)=>s+l.e[i],0));
+ return `<div class="note" style="margin-top:10px">${new Date().toLocaleDateString("ar",{weekday:"long",day:"numeric",month:"long"})}</div><h3>سلامًا ${esc(nm(uid))}</h3>
+<div class="c"><div class="row"><div><div class="note">مقرر اليوم</div><b style="font-size:20px">${T.t}</b></div><span class="pill f0">${dn?"تم":"بالانتظار"}</span></div>
+<div class="row" style="margin-top:12px"><button onclick="${T.k?`cur.a=${T.x.a};cur.z=${T.x.z};go('s','${T.k}')`:"go('s')"}" style="flex:3">ابدأ التسميع</button><button class="g" onclick="go('sch')">الجدول</button></div></div>
+<div class="g2"><div class="c"><div class="note">إتقان الأسبوع</div><div class="big">${a==null?"—":a+"%"}</div><div class="bar"><i style="width:${a||0}%"></i></div><div class="note">${days} من 5 أيام دراسية</div></div>
+<div class="c"><div class="note">أخطاء الأسبوع</div><div class="kv"><span>أخطاء</span><b>${E[0]}</b></div><div class="kv"><span>لحون</span><b>${E[1]}</b></div><div class="kv"><span>تنبيهات</span><b>${E[2]}</b></div></div></div>
+<h2 style="margin-top:18px">أقسام التسميع</h2>`+Object.keys(SEC).map(k=>`<button class="sec" onclick="go('s','${k}')"><div><b>${SEC[k]}</b><small>${SD[k]}</small></div></button>`).join("")+
+ `<div class="c"><h2>نص المصحف</h2><p class="note">المضمَّن نماذج قصيرة فقط. لتفعيل الإكمال الذكي لكل السور استورد ملف مصحف موثوق (صيغة Tanzil: سورة|آية|نص، أو JSON).</p><input type="file" accept=".txt,.json" onchange="impF(this)"><p class="note">الآيات المحملة: ${Object.keys(Q).length}</p></div>`}
+
+function tm(){const p=$("um");if(p.style.display=="block"){p.style.display="none";return}
+ p.innerHTML=`<h2>المستخدمون</h2>`+USERS.map(u=>`<div class="li row"><button class="${u.id==uid?"":"g"}" onclick="pickU('${u.id}')">${esc(u.name)}${u.id==uid?" (الحالي)":""}</button><button class="g f0" onclick="delU('${u.id}')">حذف</button></div>`).join("")+`<div class="row" style="margin-top:10px"><input id="un" placeholder="اسم مستخدم جديد"><button class="f0" onclick="addU()">إضافة</button></div>`;p.style.display="block"}
+function mkpdf(J,w,h){const enc=new TextEncoder(),parts=[],o=[];let len=0;
+ const add=x=>{const b=typeof x=="string"?enc.encode(x):x;parts.push(b);len+=b.length};
+ const obj=(i,f)=>{o[i]=len;add(i+" 0 obj\n");f();add("\nendobj\n")};const n=J.length;
+ add("%PDF-1.4\n");obj(1,()=>add("<</Type/Catalog/Pages 2 0 R>>"));
+ obj(2,()=>add("<</Type/Pages/Count "+n+"/Kids["+J.map((_,i)=>(3+i*3)+" 0 R").join(" ")+"]>>"));
+ J.forEach((j,i)=>{const p=3+i*3,c="q 595 0 0 842 0 0 cm /I"+i+" Do Q";
+  obj(p,()=>add("<</Type/Page/Parent 2 0 R/MediaBox[0 0 595 842]/Resources<</XObject<</I"+i+" "+(p+2)+" 0 R>>>>/Contents "+(p+1)+" 0 R>>"));
+  obj(p+1,()=>add("<</Length "+c.length+">>\nstream\n"+c+"\nendstream"));
+  obj(p+2,()=>{add("<</Type/XObject/Subtype/Image/Width "+w+"/Height "+h+"/ColorSpace/DeviceRGB/BitsPerComponent 8/Filter/DCTDecode/Length "+j.length+">>\nstream\n");add(j);add("\nendstream")})});
+ const xr=len,t=3+n*3;add("xref\n0 "+t+"\n0000000000 65535 f \n");for(let i=1;i<t;i++)add(String(o[i]).padStart(10,"0")+" 00000 n \n");
+ add("trailer\n<</Size "+t+"/Root 1 0 R>>\nstartxref\n"+xr+"\n%%EOF");
+ const out=new Uint8Array(len);let q=0;parts.forEach(b=>{out.set(b,q);q+=b.length});return out}
+async function dlPdf(){let dl=null;try{dl=await claude.use("downloads")}catch(e){}
+ 
+ const my=mine().filter(l=>l.t>=t0(per)).sort((a,b)=>a.t-b.t),W=1190,H=1684,M=80,pg=[],E=[0,1,2].map(i=>my.reduce((s,l)=>s+l.e[i],0));let x,y;
+ const np=()=>{const c=document.createElement("canvas");c.width=W;c.height=H;x=c.getContext("2d");x.fillStyle="#fff";x.fillRect(0,0,W,H);x.direction="rtl";x.textAlign="right";y=M+20;pg.push(c)};
+ const ln=(t,sz,col,b)=>{const f=(b?"bold ":"")+sz+"px Tahoma,'Segoe UI',Arial,sans-serif";x.font=f;let line="";const out=[];
+  String(t).split(" ").forEach(w=>{const tr=line?line+" "+w:w;if(x.measureText(tr).width>W-2*M&&line){out.push(line);line=w}else line=tr});out.push(line);
+  out.forEach(s=>{if(y>H-M-sz){np();x.font=f}x.fillStyle=col||"#1d2a23";x.fillText(s,W-M,y);y+=sz*1.7})};
+ np();ln("إتقان — تقرير "+(per=="w"?"أسبوعي":"شهري"),44,"#1b5640",1);ln("حلقة ربعي بن عمرو الأنصاري",28,"#7a8279");ln("الطالب: "+nm(uid),32,0,1);ln("التاريخ: "+new Date().toLocaleDateString("ar"),26,"#7a8279");y+=20;
+ ln("عدد الجلسات: "+my.length+"   متوسط الإتقان: "+(avg(my)==null?"—":avg(my)+"%"),30);ln("أخطاء "+E[0]+" | لحون "+E[1]+" | تنبيهات "+E[2],30);y+=20;ln("تفاصيل الجلسات",34,"#1b5640",1);
+ if(!my.length)ln("لا توجد جلسات في هذه الفترة.",26);
+ my.forEach(l=>{ln(fd(l.t)+" — "+SEC[l.k]+": "+rng(l)+" (إتقان "+l.sc+"%)",28,0,1);ln("أخطاء "+l.e[0]+" ، لحون "+l.e[1]+" ، تنبيهات "+l.e[2],24,"#7a8279");
+  if(itx(l))ln(itx(l),26);(l.items||[]).forEach(it=>{if(it.v&&Q[it.v])ln(Q[it.v],28,"#1b5640")});if(l.note)ln("ملاحظة المعلم: "+l.note,24);y+=16});
+ const J=pg.map(c=>{const b=atob(c.toDataURL("image/jpeg",.9).split(",")[1]),u=new Uint8Array(b.length);for(let i=0;i<b.length;i++)u[i]=b.charCodeAt(i);return u});
+ const fn="itqan-report-"+(per=="w"?"weekly":"monthly")+".pdf",by=mkpdf(J,W,H);
+ try{if(dl)await dl.save({filename:fn,data:by});else{const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([by],{type:"application/pdf"}));a.download=fn;document.body.appendChild(a);a.click();a.remove()}}catch(e){if(!e||e.code!="declined")toast("تعذر إنشاء الملف")}}
+function impF(el){const f=el.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const m={};let t=r.result.trim();if(t[0]=="{"){const j=JSON.parse(t);for(const k in j){if(Array.isArray(j[k]))j[k].forEach((x,i)=>m[k+":"+(i+1)]=x);else m[k.replace("|",":")]=j[k]}}else t.split(/\r?\n/).forEach(l=>{const p=l.split("|");if(p.length>=3&&/^\d+$/.test(p[0]))m[p[0]+":"+p[1]]=p.slice(2).join("|").trim()});const n=Object.keys(m).length;if(!n)return toast("تعذر قراءة الملف");Object.assign(Q,m);try{localStorage.setItem("itqQ",JSON.stringify(m))}catch(e){toast("التحميل لهذه الجلسة فقط")}toast("تم تحميل "+n+" آية");render()}catch(e){toast("ملف غير صالح")}};r.readAsText(f)}
+
+function sess(){const h=cur.k=="h";
+ return `<div class="c"><div class="seg">${Object.keys(SEC).map(k=>`<button class="${cur.k==k?"on":""}" onclick="cur.k='${k}';render()">${SEC[k]}</button>`).join("")}</div>
+<div class="row"><div><label>${h?"السورة":"من سورة"}</label><select onchange="cur.a=+this.value;comp($('w').value)">${opts(cur.a)}</select></div>${h?"":`<div><label>إلى سورة</label><select onchange="cur.z=+this.value;comp($('w').value)">${opts(cur.z)}</select></div>`}</div></div>
+<div class="c"><h2>تقييم التسميع</h2><label>اكتب بداية الآية أو الكلمة (اختياري)</label><input id="w" oninput="comp(this.value)" autocomplete="off" placeholder="يكتمل نص الآية تلقائياً"><div id="res"></div><div class="row" style="margin-top:8px">${[0,1,2].map(i=>`<button class="g" style="color:var(--${CL[i]})" onclick="addI(${i})">+ ${N[i]}</button>`).join("")}</div><div id="items">${itemsHtml()}</div></div>
+<div class="c"><h2>ملاحظات المعلم</h2><textarea rows="3" placeholder="دوّن توجيهات المعلم أثناء التسميع…" oninput="cur.note=this.value">${esc(cur.note)}</textarea></div>
+<button style="width:100%;padding:15px" onclick="saveS()">حفظ الجلسة</button>`}
+function itemsHtml(){const E=ec(cur.items);return `<div class="row" style="margin:10px 0;text-align:center">${[0,1,2].map(i=>`<div><b style="font-size:24px;color:var(--${CL[i]})">${E[i]}</b><div class="note">${N[i]}</div></div>`).join("")}</div>`+cur.items.map((x,i)=>`<div class="li"><div class="row"><b class="f0" style="color:var(--${CL[x.c]})">${N[x.c]}</b><span>${esc(x.w)||"—"}</span><button class="g f0" onclick="delI(${i})">حذف</button></div>${x.v&&Q[x.v]?`<div class="m">${esc(Q[x.v])}<small>${vr(x.v)}</small></div>`:""}</div>`).join("")}
+function addI(c){const w=$("w").value.trim();cur.items.push({c,w,v:w&&cur.pick?cur.pick:null});$("w").value="";cur.pick=null;cur.res=[];$("res").innerHTML="";$("items").innerHTML=itemsHtml()}
+function delI(i){cur.items.splice(i,1);$("items").innerHTML=itemsHtml()}
+function comp(v){const b=$("res");if(!b)return;const q=norm(v.trim());cur.res=[];if(!q){cur.pick=null;b.innerHTML="";return}
+ const h=cur.k=="h",a=h?cur.a:Math.min(cur.a,cur.z),z=h?cur.a:Math.max(cur.a,cur.z);let has=false;
+ for(let s=a;s<=z&&cur.res.length<3;s++)for(let n=1;n<=SN[s-1].c;n++){const t=Q[s+":"+n];if(!t)continue;has=true;if(norm(t).startsWith(q)){cur.res.push({s,n,t,k:s+":"+n});if(cur.res.length>=3)break}}
+ if(!cur.res.length){cur.pick=null;b.innerHTML=`<p class="note">${has?"لا توجد آية تبدأ بهذا النص في النطاق المحدد.":"نص هذا النطاق غير محمّل — استورد المصحف من الشاشة الرئيسية."}</p>`;return}
+ if(!cur.res.find(o=>o.k==cur.pick))cur.pick=cur.res[0].k;
+ b.innerHTML=cur.res.map((o,j)=>{let k=0,i=0;for(;i<o.t.length&&k<q.length;i++)k+=norm(o.t[i]).length;while(i<o.t.length&&isD(o.t[i]))i++;return `<div class="m" onclick="pickV(${j})" style="border:2px solid ${o.k==cur.pick?"var(--pr)":"transparent"}"><mark>${esc(o.t.slice(0,i))}</mark><span>${esc(o.t.slice(i))}</span><small>سورة ${SN[o.s-1].n} · آية ${o.n}</small></div>`}).join("")+(cur.res.length>1?`<p class="note">اضغط على الآية الصحيحة لتُسجَّل مع الإدخال.</p>`:"")}
+function pickV(j){cur.pick=cur.res[j].k;comp($("w").value)}
+const vr=v=>SN[v.split(":")[0]-1].n+" "+v.split(":")[1];
+const norm=s=>s.replace(/[\u064B-\u065F\u0670\u06D6-\u06ED\u0640]/g,"").replace(/[أإآٱ]/g,"ا").replace(/ى/g,"ي").replace(/ة/g,"ه").replace(/\s+/g," ");
+const isD=c=>/[\u064B-\u065F\u0670\u06D6-\u06ED\u0640]/.test(c);
+async function saveS(){const h=cur.k=="h",l={u:uid,k:cur.k,a:h?cur.a:Math.min(cur.a,cur.z),z:h?cur.a:Math.max(cur.a,cur.z),items:cur.items.slice(),e:ec(cur.items),note:cur.note.trim(),t:Date.now()};l.sc=sc(l.e);
+ LOGS.push(l);loc();
+ cur.items=[];cur.note="";cur.pick=null;toast("تم تسجيل الجلسة");render()}
+
+function sch(){return `<h2 style="margin-top:14px">الجدول الأسبوعي</h2><p class="note">من الأحد إلى الخميس${isT?" — يمكنك تعديل المقرر لكل يوم":""}.</p>`+DAYS.map((d,i)=>{const x=SCH[i]||{k:"h",a:1,z:1};
+ return `<div class="c"><b>${d}</b>`+(isT?`<div class="seg" style="margin:8px 0">${Object.keys(SEC).map(k=>`<button class="${x.k==k?"on":""}" onclick="setD(${i},'k','${k}')">${SEC[k]}</button>`).join("")}</div><div class="row"><select onchange="setD(${i},'a',+this.value)">${opts(x.a)}</select>${x.k=="h"?"":`<select onchange="setD(${i},'z',+this.value)">${opts(x.z)}</select>`}</div>`:`<div class="note">${SCH[i]?SEC[x.k]+": "+rng(x):"لم يحدد بعد"}</div>`)+`</div>`}).join("")}
+async function setD(i,f,v){const x=Object.assign({k:"h",a:1,z:1},SCH[i]);x[f]=v;if(x.k=="h"||x.z<x.a)x.z=x.a;SCH[i]=x;
+ loc();render()}
+
+function log(){const L=mine().sort((a,b)=>b.t-a.t);
+ return `<h2 style="margin-top:14px">السجل</h2><div class="c">`+(L.length?L.map(l=>`<div class="li"><div class="row"><b>${SEC[l.k]}: ${rng(l)}</b><span class="pill f0">إتقان ${l.sc}%</span></div><div class="note">${fd(l.t)} · أخطاء ${l.e[0]} · لحون ${l.e[1]} · تنبيهات ${l.e[2]}</div>${itx(l)?`<div class="tn">${esc(itx(l))}</div>`:""}${l.note?`<div class="tn">ملاحظة المعلم: ${esc(l.note)}</div>`:""}</div>`).join(""):`<p class="note">لا توجد جلسات بعد.</p>`)+`</div>`}
+
+function st(){const p=t0(per),P=LOGS.filter(l=>l.t>=p),by={};P.forEach(l=>{(by[l.u]=by[l.u]||[]).push(l)});
+ const R=Object.keys(by).map(u=>({u,n:by[u].length,a:avg(by[u]),p:by[u].reduce((s,l)=>s+l.sc,0)})).sort((a,b)=>b.p-a.p);
+ const my=P.filter(l=>l.u==uid),F=LOGS.slice().sort((a,b)=>b.t-a.t).slice(0,15);
+ return `<div class="c" style="margin-top:14px"><div class="seg"><button class="${per=="w"?"on":""}" onclick="per='w';render()">أسبوعي</button><button class="${per=="m"?"on":""}" onclick="per='m';render()">شهري</button></div></div>
+<div class="c"><h2>لوحة المتصدرين</h2><p class="note">المقارنة بين مستخدمي هذا الجهاز. النقاط = مجموع نسب الإتقان لجلسات الفترة.</p>`+(R.length?R.map((r,i)=>`<div class="li row"><b class="f0">${i+1}</b><span>${esc(nm(r.u))}${r.u==uid?" (أنا)":""}</span><span class="note f0">${r.n} جلسة · ${r.a}%</span><b class="f0">${r.p}</b></div>`).join(""):`<p class="note">لا توجد جلسات في هذه الفترة.</p>`)+`</div>
+<div class="c"><h2>تقريري</h2><div class="kv"><span>الجلسات</span><b>${my.length}</b></div><div class="kv"><span>متوسط الإتقان</span><b>${avg(my)==null?"—":avg(my)+"%"}</b></div>${["خطأ","لحن","تنبيه"].map((n,i)=>`<div class="kv"><span>${n}</span><b>${my.reduce((s,l)=>s+l.e[i],0)}</b></div>`).join("")}<div class="row" style="margin-top:10px"><button class="g" onclick="share()">مشاركة / نسخ</button><button onclick="dlPdf()">تحميل PDF</button></div></div>
+<div class="c"><h2>إنجازات الحلقة</h2>`+(F.length?F.map(l=>`<div class="li"><div class="row"><b>${esc(nm(l.u))}</b><span class="pill f0">${l.sc}%</span></div><div class="note">${SEC[l.k]}: ${rng(l)} · ${fd(l.t)}</div></div>`).join(""):`<p class="note">لا توجد إنجازات بعد.</p>`)+`</div>`}
+function share(){const p=t0(per),my=mine().filter(l=>l.t>=p).sort((a,b)=>a.t-b.t);
+ const t=`تقرير ${per=="w"?"أسبوعي":"شهري"} — إتقان\nحلقة ربعي بن عمرو الأنصاري\nالطالب: ${nm(uid)}\nالجلسات: ${my.length} | الإتقان: ${avg(my)==null?"—":avg(my)+"%"}\nأخطاء ${my.reduce((s,l)=>s+l.e[0],0)} | لحون ${my.reduce((s,l)=>s+l.e[1],0)} | تنبيهات ${my.reduce((s,l)=>s+l.e[2],0)}\n\n`+my.map(l=>`• ${fd(l.t)} ${SEC[l.k]}: ${rng(l)} (خ${l.e[0]} ل${l.e[1]} ت${l.e[2]})${itx(l)?" — "+itx(l):""}${l.note?" — ملاحظة: "+l.note:""}`).join("\n");
+ if(navigator.share){navigator.share({text:t}).catch(()=>{})}else{try{navigator.clipboard.writeText(t).then(()=>toast("تم نسخ التقرير"),()=>toast("تعذر النسخ"))}catch(e){toast("تعذر النسخ")}}}
+init();
+</script>
+</body>
+</html>
